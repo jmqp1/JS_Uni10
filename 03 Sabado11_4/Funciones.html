@@ -8,26 +8,29 @@
 <body>
     <h1>FUNCIONES</h1>
     <script>
-    //var num1=10;
-    //var num2= 2;
-    // funcion sin parámetros y con retorno.
-    /* function suma(){
-        return console.log(num1+num2);
-    }
-    suma(); 
+        var num1=10;
+        var num2= 2;
+        
+        // funcion sin parámetros y con retorno.
+        function suma(){
+            return console.log(num1+num2);
+        }
+        suma(); //Invocación a la función
 
-    // funcion con parámetros y con retorno.
-    function suma(num1,num2){
-        return console.log(num1+num2);
-    }
-    suma(20,10); 
-    // funcion que no devuelve nada
-     function suma(num1,num2){
-        var total =num1+num2;
-        alert(total);
-    }
-    suma(4,7);
-    alert("total 2"+total); // total no está definido. */
+    
+        // funcion con parámetros y con retorno.
+        function suma(num1,num2){
+            return console.log(num1+num2);
+        }
+        suma(20,10);
+    
+        // funcion que no devuelve nada
+        function suma(num1,num2){
+            var total =num1+num2;
+            alert(total);
+        }
+        suma(4,7);
+        alert("total 2 "+total); // la variable total no está definida fuera de la función. */
 /*
     // IIFE (Inmediately Invoked Function Expression);
     (function suma(num1,num2){
@@ -47,13 +50,13 @@
         console.log ("Date de Alta "+nombre);
     })();*/
 // funcion anónima y paso de función por parámetro
-    let llamaFunc=function(func,param){
+    /*let llamaFunc=function(func,param){
         func(param);
     }
     llamaFunc(function(name){
         console.log("Hola"+" "+name);
     },"Juan" );
-
+    */
 
 </script>
 </body>
