@@ -10,3 +10,12 @@ for (let i=0;i<tamaño;i++) {
     console.log("Elemento Nº " + i + " es "+ tabla[i]);
 
 }
+// Tres formas de recorrer un Array
+let fecha=new Array(23,5,"Hola",new Date());
+for(let i=0;i<fecha.length;i++) {
+    console.log("Tabla fecha: = "+fecha[i]);
+}
+for(let Index in fecha){
+    console.log("Tabla fecha con Indice: = "+fecha[Index]); // Parecido a forEach
+}
+fecha.forEach((item)=>console.log("Tabla fecha con Flechas:= " + item));
