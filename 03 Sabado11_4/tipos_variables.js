@@ -7,7 +7,6 @@ console.log(typeof a);
 a=[12,23,4]; //definimos array
 console.log(a);
 console.log(typeof a);
-//console.log(a instanceof Array);  //devuelve true porque a es de tipo Array
-console.log(a instanceof String);   //devuelve falso
+console.log(a instanceof String);
 let b;
-console.log(typeof b);  //devuelve que b es de tipo undefined
+console.log(typeof b);
