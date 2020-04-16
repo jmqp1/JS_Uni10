@@ -7,62 +7,78 @@
 </head>
 <body>
     <h1>FUNCIONES</h1>
+    
     <script>
-   /* var num1=10;
+    var num1= 10;
     var num2= 2;
-    // funcion sin parámetros y con retorno.
-     function suma(){
-        return console.log(num1+num2);
-    }
-    suma(); /*
     
-    // funcion con parámetros y con retorno.
-    /*function suma(num1,num2){
-        return console.log(num1+num2);
+    /*
+    // FUNCIÓN SIN PARÁMETROS Y CON RETORNO.
+    function suma(){
+        return console.log(num1+num2); //Devuelve por consola la operación con dos vables externas
     }
-    suma(20,10); */
+    suma(); //Llamada a la función
+    */
 
-    // funcion que no devuelve nada
-   /* function suma(num1,num2){
-         total =num1+num2;
-        return alert ("total "+total);
-    
+    /*
+    // FUNCIÓN CON PARÁMETROS Y CON RETORNO.
+    function suma(num1,num2){
+        return console.log(num1+num2);
+    }
+    suma(20,10);
+    */
+
+    /*
+    // FUNCIÓN QUE NO RETORNA NADA
+    function suma(num1,num2){
+        total = num1+num2;
+        return alert ("total interno de la función: "+total);
     }
     suma(4,7);
-    alert("total2  "+total); // total no está definido sin el return*/
-/*
-    // IIFE (Inmediately Invoked Function Expression);
+    alert("total externo de la función: "+total); // total no está definido sin el return
+    */
+    
+    /*
+    // IIFE (Inmediately Invoked Function Expression); Permite ser llamada UNA ÚNICA VEZ
     (function suma(num1,num2){
         console.log(num1+num2);
     })(20,15); // Se invoca automáticamente */
     
-    //Sin flechas
+    /*
+    // IIFE SIN FLECHAS, SIN PARÁMETROS
     (function(){
-        console.log("Date de Alta, funcion completa");
+        console.log("Date de Alta, función completa");
     })();
-// Funciones con Flechas sin parámetros
-    (()=>{
-        console.log ('Date de Alta');
-    })(); 
+    */
 
-// Funciones con Flechas con parámetros
-/*((nombre,Apellido)=>{
+    /*
+    // IIFE CON Flechas, SIN Parámetros
+    (()=>{
+        console.log ('Date de Alta, función con flechas');
+    })();
+    */ 
+
+    /*
+    // FUNCIONES CON Flechas, CON Parámetros
+    ((nombre,Apellido)=>{
         console.log ("Date de Alta "+nombre+" "+Apellido);
     })("Pepe","Sánchez");
-    // Por defecto
+    // PARÁMETRO Por defecto
     ((nombre="Higinio")=>{
         console.log ("Date de Alta "+nombre);
-    })();*/
+    })();
+    */
 
-// funcion anónima y paso de función por parámetro
-    let llamaFunc=function(func,param){
+    
+    // FUNCIÓN ANÓNIMA y paso de función por parámetro ¿¿??
+    let llamaFunc=function(func,param){ //Pasamos como argumentos: una función y un parámetro
         func(param);
         alert(param)
     }
-    llamaFunc(function(name){
+    llamaFunc(function(name){   //función anónima
         console.log("Hola"+" "+name);
     },"Juan" );
-
+    
 
 </script>
 </body>

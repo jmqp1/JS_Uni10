@@ -7,18 +7,18 @@
 </head>
 <body>
     <div>
-<h1 id = "titulo"> Función Onclick</h1>
-<button id="boton"> Haz clic </button>
+        <h1 id = "titulo"> Función Onclick</h1>
+        <button id="boton"> Haz clic </button>
     </div>
+    
     <script>
-
-function cambiar (){
-    document.getElementById("titulo").innerHTML="Nuevo título";
-}
-//cambiar();
-document.getElementById("boton").onclick=function(){
-    cambiar();
-}
+        function cambiar (){
+            document.getElementById("titulo").innerHTML="Nuevo título";
+        }
+        //cambiar();
+        document.getElementById("boton").onclick=function(){
+            cambiar();  //Llamada a la función 
+        }
     </script>
   </body>
 </html>

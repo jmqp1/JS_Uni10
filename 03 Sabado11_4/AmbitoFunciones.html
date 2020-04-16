@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambito Funciones</title>
+    <title>Ámbito Funciones</title>
 </head>
 <body>
     <h1>Ámbito de las Funciones</h1>
+    
     <script>
-        var mensaje="fuera función";
+        var mensaje="Fuera de la función";
         function ambitoVar(num1,num2) {
-           var mensaje = "Dentro función"; // var es una variable local de la función
+           var mensaje = "Dentro de la función"; // var es una variable local de la función
            total = num1+num2;
            alert(mensaje);
             //mensaje="Mensaje de prueba2"; // ahora es una variable global
            return total;
-}
-resultado=ambitoVar(10,20);
-alert(resultado);
-alert(mensaje);
+        }
+        resultado=ambitoVar(10,20);
+        alert(resultado);
+        alert(mensaje);
     </script>
+
 </body>
 </html>
