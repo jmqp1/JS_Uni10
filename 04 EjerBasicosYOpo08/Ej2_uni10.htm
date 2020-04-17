@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ej2_Uni10</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript - Oposiciones</h1>
+    <h2>Ejercicio 2</h2>
+    <p>Calcula la media de <b>n</b> números reales introducidos (la lista termina con un cero).</p>
+    
+    <script>
+        alert("Ejercicio 2");
+        var numeroIntroducido, contador, suma, media;
+        contador=0;
+        suma=0,0;
+
+        do {
+            numeroIntroducido=parseFloat(prompt("Introduzca un número (ó 0 para terminar): "));
+            suma+=numeroIntroducido;
+            contador++;
+            console.log("Numero introducido: "+numeroIntroducido+" | Suma: "+suma+" | Contador: "+contador); //Traza
+        } while (numeroIntroducido != 0);
+        
+        contador--; //Una vez se introduce el valor 0 hemos de despreciar su entrada y conteo
+        if (contador == 0) {
+            document.write("No se ha introducido ningún valor");
+        }
+        else {
+            media=suma/(contador);
+            document.write("<br/>Valor medio de los valores introducidos = "+media);
+            document.write("<br/>Suma de los valores introducidos = "+suma);
+            document.write("<br/>Número de valores introducidos = "+contador);
+        }
+                
+    </script>
+</body>
+</html>

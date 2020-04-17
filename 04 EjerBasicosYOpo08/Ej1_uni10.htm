@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ej1_Uni10</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript - Oposiciones</h1>
+    <h2>Ejercicio 1</h2>
+    <p>Extrae las iniciales de una persona, una vez introducidos el apellido y el nombre.</p>
+    <script>
+        alert("Ejercicio 1");
+        var apellido = prompt("Introduzca el apellido: ");
+        var nombre = prompt("Introduzca el nombre: ");
+        document.write("Usted es "+nombre+" "+apellido);
+        var inicialApellido = apellido[0];
+        var inicialNombre = nombre[0];
+        document.write("<br/>Sus iniciales son: "+inicialNombre+inicialApellido);
+        document.write("<br/>Su nombre tiene "+nombre.length+" letras y su apellido "+apellido.length+" letras");
+
+    </script>
+</body>
+</html>

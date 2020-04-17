@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ej5_Uni10</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript - Oposiciones</h1>
+    <h2>Ejercicio 5 - Oposición 2008</h2>
+    <p>Realitze una pàgina web utilitzant javascript que permet a l'usuari encertar un número situat entre un valor 
+        máxim i un valor mínim (assignats al codi). Si el número introduït està for adel rang dels valors màxim i mínim
+        se li tornarà a demanar un número, sense que això compte com a intent. Es donarà un màxim de 3 intents.
+    </p>
+    <p>El missatge final a mostrar haurà de ser un d'aquests dos missatges:
+        <ul>
+            <li>"Enhorabona, has encertat en l'intent X"    </li>
+            <li>"Ho sent, has fallat després de 3 intents"  </li>
+        </ul>
+    </p>
+    
+    <script>
+        alert("Ejercicio 5");
+        var introduit, minim, maxim, encertat, numIntentsMax, numIntentActual;
+        
+        minim=5;
+        maxim=10;
+        encertat=7;
+        numIntentsMax=3;
+        numIntentActual=1;
+
+        do {
+            introduit=parseInt(prompt("Prova sort introduïnt un valor entre "+minim+" y "+maxim+": "));
+            if (introduit == encertat) {
+                document.write("<br/>Enhorabona, has encertat en l'intent "+numIntentActual);
+            }
+            else {
+                if (introduit>=minim && introduit<=maxim){
+                    numIntentActual++;
+                    alert("Has consumit un intent. Prova una altra vegada...")
+                }
+                else{
+                    alert("Introduix un número entre "+minim+" y "+maxim+". No has consumit cap intent");
+                }
+            }
+            console.log("numero de intent: "+numIntentActual);
+        } while (introduit!=encertat || numIntentActual<=numIntentsMax)
+        if (numIntentActual>numIntentsMax) document.write("Ho sent, has fallat després de "+numIntentsMax+" intents.")
+
+    </script>
+</body>
+</html>
