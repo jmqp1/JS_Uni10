@@ -20,7 +20,7 @@
     </p>
     
     <script>
-        alert("Ejercicio 5. PENDIENTE DE REMATAR");
+        alert("Ejercicio 5");
         var introduit, minim, maxim, encertat, numIntentsMax, numIntentActual;
         
         minim=5;
@@ -37,14 +37,14 @@
             else {
                 if (introduit>=minim && introduit<=maxim){
                     numIntentActual++;
-                    alert("Has consumit un intent. Prova una altra vegada...")
+                    alert("No és el número correcte. Has consumit un intent.")
                 }
                 else{
                     alert("Introduix un número entre "+minim+" y "+maxim+". No has consumit cap intent");
                 }
             }
             console.log("numero de intent: "+numIntentActual);
-        } while (introduit!=encertat || numIntentActual<=numIntentsMax)
+        } while (introduit!=encertat && numIntentActual<=numIntentsMax)
         if (numIntentActual>numIntentsMax) document.write("Ho sent, has fallat després de "+numIntentsMax+" intents.")
 
     </script>
