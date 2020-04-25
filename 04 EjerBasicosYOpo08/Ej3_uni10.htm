@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ej3_Uni10</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript - Oposiciones</h1>
+    <h2>Ejercicio 3</h2>
+    <p>Determinar la <b>cantidad de números pares</b> de una tabla en la que se deben introducir 5 valores.</p>
+    
+    <script>
+        alert("Ejercicio 3");
+        var vector=new Array(5);
+        var cantidadPares=0;
+
+        //Introducción de valores en el vector
+        for (var i=0; i<vector.length; i++){
+            vector[i]=parseInt(prompt("Introduzca valor para la posición: "+(i+1)));
+            if (vector[i]%2 == 0) {
+                cantidadPares++;
+            }
+            console.log("cantidad de pares: "+cantidadPares);   
+        }
+        document.write("Vector: "+vector+ "<br/> Cantidad de números pares: "+cantidadPares);
+
+        //    document.write("No se ha introducido ningún valor");
+                
+    </script>
+</body>
+</html>

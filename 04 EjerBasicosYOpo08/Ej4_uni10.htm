@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ej4_Uni10</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript - Oposiciones</h1>
+    <h2>Ejercicio 4</h2>
+    <p>Dada una tabla <b>tb</b> de 2 dimensiones, 4 filas y 5 columnas, realizar lo siguiente:
+        <ul>
+            <li>Introducir los valores de las 3 primeras filas y las 4 primeras columnas.
+                <br/>(Se reserva la última fila y última columna para el total acumulado)
+            </li>
+            <li>Sumar las columnas en la última fila y las filas en la última columna</li>
+        </ul>
+    </p>
+    
+    <script>
+        alert("Ejercicio 4");
+        var fil=4; 
+        var col=5;
+        var tb=new Array(fil);    //4 Filas creadas
+        var total;
+        
+        //Crear las 5 columnas en cada una de las 4 filas == Tabla completa declarada
+        for (var i=0; i<fil; i++)
+            tb[i]=new Array(5);
+
+        //Recorrido de la tabla para la introducción de valores
+        for (i=0; i<fil-1; i++) {
+            for (var j=0; j<col-1; j++) {
+                tb[i][j]=parseFloat(prompt("Introduzca valor para la posición ("+i+","+j+"): "));
+            }
+        }
+        
+        //Puesta a 0 de las posiciones de fila 4a y columna 5a
+        for (j=0; j<col-1; j++)     tb[3][j]=0;
+        for (i=0; i<=fil-1; i++)    tb[i][4]=0;
+
+        //Totalización de cada fila en la columna 5a
+        for (i=0; i<fil-1; i++) {
+            total=0;
+            for (j=0; j<col-1; j++) {   total+=tb[i][j];    }
+            tb[i][col-1]=total;
+        }
+
+        //Totalización de cada columna en la fila 4a
+        for (j=0; j<col-1; j++) {
+            total=0;
+            for (i=0; i<fil-1; i++) {   total+=tb[i][j]     }
+            tb[fil-1][j]=total;
+        }
+
+        //Total de toda la tabla. Para ello: sumar todos los valores de la última fila Ó de la última columna
+        total=0;
+        for (j=0; j<col-1; j++) {   total+=tb[fil-1][j]     }
+        tb[fil-1][col-1]=total;
+
+        //Muestra tabla final por posiciones
+        for (i=0; i<fil; i++) {
+            for (j=0; j<col; j++) {
+                document.write("<br/>La posición ("+i+","+j+") tiene el valor: "+tb[i][j]);
+            }
+        }
+        
+        //Muestra la tabla final por consola
+        console.log(tb);
+    </script>
+</body>
+</html>

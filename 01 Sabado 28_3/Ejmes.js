@@ -7,23 +7,23 @@ mes = parseInt(prompt("Número del mes (1 a 6) :")); //ParseInt convierte la str
 /* Visualización del resultado */
 switch (mes) {
 	case 1:
-		document.write(“ Mes nº “ + mes + “ : Enero” );
+		document.write("Mes nº " + mes + " : Enero");
 		break;
 	case 2:
-		document.write("Mes nº  “+ mes + " : Febrero");
+		document.write("Mes nº  "+ mes + " : Febrero");
 		break;
 	case 3:
-		document.write("Mes nº “+   mes + " : Marzo");
+		document.write("Mes nº "+   mes + " : Marzo");
 		break;
 	case 4:
-		document.write("Mes nº ”  + mes + " : Abril");
+		document.write("Mes nº "  + mes + " : Abril");
 		break;
 	case 5:
-		document.write("Mes nº “ + mes + " : Mayo");
+		document.write("Mes nº " + mes + " : Mayo");
 		break;
 	case 6:
-		document.write("Mes nº “ + mes + " : Junio");
+		document.write("Mes nº " + mes + " : Junio");
 		break;
 	default:
-		document.write("Error de introducci󮠤e datos en el nº de mes");
+		document.write("Error de introducción e datos en el nº de mes");
 	}

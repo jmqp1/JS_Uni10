@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Presentacion DOM</title>
+</head>
+<body>
+    <div id ="container">
+
+    </div>
+    <div id ="contenedor">
+        <h1 id="titulo"> Presentación DOM</h1>
+        <p id="parrafo" class="P1">Lorem 11 ipsum dolor sit amet consectetur adipisicing elit. Unde molestias eligendi est accusantium 
+        cupiditate magni, libero debitis omnis, sed iste error quia distinctio! Illo porro eos, suscipit ad est adipisci.</p>
+        <p id="parrafo" class="P1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestias eligendi est accusantium 
+            cupiditate magni, libero debitis omnis, sed iste error quia distinctio! Illo porro eos, suscipit ad est adipisci.</p>
+          
+    </div>
+    <script>
+        var parrafo = document.getElementsByTagName("p");   //DEVUELVE TODOS LOS PÁRRAFOS EN UN ARRAY (LOS DOS p)
+        var titulo = document.getElementById("titulo") // devuelve el título
+        titulo.innerHTML="Nuevo texto" //puedo modificar el texto DEL TITULO.
+        console.log(titulo);
+        CONSOLE.LOG(PARRAFO)        //DEVUELVE TODOS LOS ELEMENTOS DE LA VABLE PARRADO, 2 ELEMENTOS
+        console.log(parrafo[1]);    //SEGUNDO PÁRRAFO
+        CONSOLE.LOG(PARRAFO[0])     //PRIMER PÁRRAFO
+
+        // Crear un nuevo parrofo dentro de contenedor.
+        var nuevo_parrafo = document.createElement("p").appendChild(document.createTextNode("Nuevo párrafo."));
+        
+        // Creamos una variable del segundo párrafo
+        var tercero_p = document.getElementById("contenedor").getElementsByTagName("p")[1];
+        
+        // Y ahora lo insertamos
+        document.getElementById("contenedor").insertBefore(nuevo_parrafo,tercero_p);
+            
+    
+        // Búsqueda del elemento div con identificador container
+        var antiguoContainer = document.getElementById("container");
+        // Creación en memoria de un elemento div
+        var nuevaDiv = document.createElement("div");
+        // Creación del nodo de tipo texto
+        var textoDiv = document.createTextNode("Buenos días, mundo");
+        // Asignación del nodo textoDiv al nodo nuevaDiv
+        nuevaDiv.appendChild(textoDiv);
+        // Integración del nuevo div
+        antiguoContainer.appendChild(nuevaDiv);
+
+    </script>
+
+</body>
+</html>
