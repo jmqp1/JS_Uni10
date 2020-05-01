@@ -9,20 +9,20 @@
     <title>Presentacion DOM</title>
 </head>
 <body>
-    <div id ="container">
-
-    </div>
+    <div id ="container"> </div>
+    
     <div id ="contenedor">
         <h1 id="titulo"> Presentación DOM</h1>
         <p id="parrafo" class="P1">Lorem 11 ipsum dolor sit amet consectetur adipisicing elit. Unde molestias eligendi est accusantium 
         cupiditate magni, libero debitis omnis, sed iste error quia distinctio! Illo porro eos, suscipit ad est adipisci.</p>
         <p id="parrafo" class="P1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestias eligendi est accusantium 
             cupiditate magni, libero debitis omnis, sed iste error quia distinctio! Illo porro eos, suscipit ad est adipisci.</p>
-          
     </div>
+    
     <script>
         var parrafo = document.getElementsByTagName("p");   //DEVUELVE TODOS LOS PÁRRAFOS EN UN ARRAY (LOS DOS p)
         var titulo = document.getElementById("titulo") // devuelve el título
+        
         titulo.innerHTML="Nuevo texto" //puedo modificar el texto DEL TITULO.
         console.log(titulo);
         CONSOLE.LOG(PARRAFO)        //DEVUELVE TODOS LOS ELEMENTOS DE LA VABLE PARRADO, 2 ELEMENTOS
@@ -39,6 +39,7 @@
         document.getElementById("contenedor").insertBefore(nuevo_parrafo,tercero_p);
             
     
+        /*EJEMPLO PÁGINA 8*/
         // Búsqueda del elemento div con identificador container
         var antiguoContainer = document.getElementById("container");
         // Creación en memoria de un elemento div
