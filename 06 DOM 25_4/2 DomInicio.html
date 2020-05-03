@@ -6,7 +6,7 @@
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Dom inicio</title>
+    <title>DOM inicio</title>
 </head>
 <body>
     <div class="contenedor">
@@ -18,32 +18,32 @@
         
         <button id="boton" class="btn btn-info">Cambiar</button>
         <!--button id="boton" class="btn btn-info" onclick="alert('click')">-->
-
     </div>
+  
     <script>
-        // accedemos al id del título, capturamos todo el h1
-        var h1 = document.getElementById("titulo"); 
-        console.log(h1); //1
-        console.log(h1.innerHTML); //2 podemos acceder únicamente al texto de h1.
-        h1.innerHTML = "Este es el nuevo texto" // Podemos modificar el texto.
-        h1.style.color="blue"
-        h1.style.background="red"
+        // accedemos al id del título, capturamos todo el h1 en la variable tit1
+        var tit1 = document.getElementById("titulo"); 
+        console.log(tit1);            //1 muestra el elemento capturado <h1> completo
+        console.log(tit1.innerHTML);  //2 podemos acceder únicamente al texto de h1.
+        tit1.innerHTML = "Este es el nuevo texto" // Podemos modificar el texto.
+        tit1.style.color="blue"         //color de letra azul 
+        tit1.style.background="red"     //fondo rojo
 
-        // accedemos al párrafo
-        var parrafo = document.getElementById("parrafo");
-        parrafo.style.color="grey"
+        // capturamos el párrafo en una variable paragraf
+        var paragraf = document.getElementById("parrafo");
+        paragraf.style.color="grey"
 
         //accedemos al botón
         var boton = document.getElementById("boton");
         
-        /* boton.onclick = function (){    // es una funcion anónima se puede hacer así MANERA 2
-            parrafo.style.color="green"
+        /* boton.onclick = function (){    // es una funcion anónima, se puede hacer así MANERA 1
+            paragraf.style.color="green"
         } */
 
         function cambiar() {
-            parrafo.style.color="green"
+            paragraf.style.color="yellow"
         }
-        boton.onclick = cambiar; // tambien se puede hacer así MANERA 1
+        boton.onclick = cambiar; // tambien se puede hacer así MANERA 2
 
         // vamos acceder desde class
         // var parrafo1 = document.getElementsByClassName("P1");
@@ -51,7 +51,7 @@
 
         // querySelector podemos buscar cualquier selector
         var parrafo1 = document.querySelectorAll("p")   //DEVUELVE TODOS LOS p
-        //var parrafo1 = document.querySelector("p")  //DEVUELVE SOLO EL PRIMERO
+        let parrafo2 = document.querySelector("p")  //DEVUELVE SOLO EL PRIMERO
         console.log(parrafo1)
 
 

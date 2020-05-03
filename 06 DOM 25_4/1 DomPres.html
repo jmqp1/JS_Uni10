@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,9 @@
     <title>Presentacion DOM</title>
 </head>
 <body>
-    <div id ="container"> </div>
+    <div id ="container"> </div>    <!--Contenedor vacío. Se irá mofificando-->
     
-    <div id ="contenedor">
+    <div id ="contenedor">          <!--Otro contenedor con otra ID-->
         <h1 id="titulo"> Presentación DOM</h1>
         <p id="parrafo" class="P1">Lorem 11 ipsum dolor sit amet consectetur adipisicing elit. Unde molestias eligendi est accusantium 
         cupiditate magni, libero debitis omnis, sed iste error quia distinctio! Illo porro eos, suscipit ad est adipisci.</p>
@@ -20,16 +20,16 @@
     </div>
     
     <script>
-        var parrafo = document.getElementsByTagName("p");   //DEVUELVE TODOS LOS PÁRRAFOS EN UN ARRAY (LOS DOS p)
-        var titulo = document.getElementById("titulo") // devuelve el título
+        var paragraf = document.getElementsByTagName("p");   //DEVUELVE TODOS LOS PÁRRAFOS EN UN ARRAY (LOS DOS p)
+        var titol = document.getElementById("titulo")      // almacena el elemento título en la var titol
         
-        titulo.innerHTML="Nuevo texto" //puedo modificar el texto DEL TITULO.
-        console.log(titulo);
-        CONSOLE.LOG(PARRAFO)        //DEVUELVE TODOS LOS ELEMENTOS DE LA VABLE PARRADO, 2 ELEMENTOS
-        console.log(parrafo[1]);    //SEGUNDO PÁRRAFO
-        CONSOLE.LOG(PARRAFO[0])     //PRIMER PÁRRAFO
+        titol.innerHTML="Nuevo texto" //puedo modificar el texto de la var titol.
+        console.log(titol);         //Mostra en consola la variable titol que contiene el elemento h1 modificado
+        console.log(paragraf);       //DEVUELVE TODOS LOS ELEMENTOS DE LA VABLE paragraf, 2 ELEMENTOS
+        console.log(paragraf[1]);    //SEGUNDO PÁRRAFO
+        console.log(paragraf[0])     //PRIMER PÁRRAFO
 
-        // Crear un nuevo parrofo dentro de contenedor.
+        // Crear un nuevo parrafo dentro de contenedor.
         var nuevo_parrafo = document.createElement("p").appendChild(document.createTextNode("Nuevo párrafo."));
         
         // Creamos una variable del segundo párrafo
