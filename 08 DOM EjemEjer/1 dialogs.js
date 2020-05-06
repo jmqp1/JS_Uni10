@@ -18,7 +18,7 @@ buttonConfirm.addEventListener("click", () => {
 
 let buttonPrompt = document.getElementById("showPrompt");
 buttonPrompt.addEventListener("click", () => {
-    let response = prompt("Cómo te llamas?","Elvis");
+    let response = prompt("Cómo te llamas?","Elvis");   //Muestra una ventana preguntando el nombre y lo guarda
     if (response) {
         console.log("Tu nombre es " + response);
     } else {
